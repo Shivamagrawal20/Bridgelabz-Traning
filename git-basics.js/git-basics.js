@@ -10,7 +10,7 @@ brew install git
 git --version 
 */
 
-/*
+/*lop
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 */
@@ -44,4 +44,4 @@ git rmf src/old-file.js ----->Removing folder
 
 git tag -a v1.1.0.0  ---> if we update with the same tag then it shows a fatal error 
 git tag -a v1.1.0.0
-/*
+*/
