@@ -26,3 +26,9 @@ console.log("Trimmed Message:", message.trim());
 
 //include()
 let sentence = "I love programming in JavaScript";
+
+//alert()
+alert("Welcome to Node.js Backend!");
+console.log("Includes 'programming':", sentence.includes("programming"));
+
+
