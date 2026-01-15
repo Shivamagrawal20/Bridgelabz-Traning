@@ -32,3 +32,43 @@ alert("Welcome to Node.js Backend!");
 console.log("Includes 'programming':", sentence.includes("programming"));
 
 
+// trim()
+let msg = "Hello World!   ";
+console.log("Trimmed Message:", msg.trim());
+
+//includes()
+let phrase = "I love programming in JavaScript";    
+console.log("Includes 'love:",sentence.includes("love"));
+
+//startsWith()
+let email = "admin@gmail.com";
+console.log("Starts with admin:",email.startsWith("admin"));
+
+//endsWith()
+console.log("Ends with .com:",email.endsWith(".com"));
+
+//slice( )
+let fruit = "Banana";
+console.log("Slice (1,4):",fruit.slice(1,4)); // ana
+
+//substring()
+console.log("substring(4,10):",lang.substring(4,10));
+
+//replace()
+let greet = "Hello World";
+console.log("Replace:",greet.replace("World","Node.js"));
+
+//replaceAll()
+let hiText="Hi Hi Hi ";
+console.log("Replace All:",hiText.replaceAll("Hi","Hello"));
+
+//concat()
+let a = "Hello";
+let b = "World";
+console.log("Concat:",a.concat("",b));
+
+//Template Literals
+let username = "Aman";
+let age = 25;
+console.log('My name is ${username} and age is ${age}.');
+
