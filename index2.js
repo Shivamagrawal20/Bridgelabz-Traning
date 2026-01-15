@@ -72,3 +72,29 @@ let username = "Aman";
 let age = 25;
 console.log('My name is ${username} and age is ${age}.');
 
+// String Comperison
+let password  = "1234";
+let inputpass = "1234";
+console.log("passwords match:",passowrd==inputpass);
+
+// string Immuntability
+let str = "Hello";
+str.toUpperCase();
+console.log("String after toUpperCase:",str); 
+
+// Email Verification
+let userEmail = "user@gmail.com";
+if (userEmail.includes("@") && userEmail.endsWith(".com")){
+    console.log("Valid Email");
+} else {
+    console.log("Invalid Email");
+}
+
+// Real Backend Example - password trim
+let userPassword = "admin123";
+userPassword = userPassword.trim();
+console.log("Trimmed Password:",userPassword);
+
+// count words in a string 
+let sentnce2 = "This is a sample sentence";
+let words = sentnce2.trim().split(" ");
