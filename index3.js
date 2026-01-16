@@ -38,3 +38,43 @@ console.log("concat",combined);
 //join()
 console.log("join:",names.join(" - "));
 
+//reverse()
+names.reverse();
+console.log("Reverse:",names);
+
+//sort()
+let unsorted = [5,2,9,1];
+unsorted.sort();
+console.log("Sort:",unsorted);
+
+//for eaxch()
+numbers.forEach((num)=>{
+    console.log("ForEach value:",num);
+});
+
+//map() - new array return
+let doubled = numbers.map((map)=>num*2);
+console.log("Map(double):",doubled);
+
+//filter()
+let evenNumbers = numbers.filters((num)=>num%2 === 0);
+console.log("Filter (even)",evenNumbers);
+
+//find()
+let found = numbers.find((num)=>num>30);
+console.log("Find(>30):",found);
+
+//findIndex()
+let foundIndex = numbers.findIndex((num)=>num===40);
+console.log("FindIndex(40):",foundIndex);
+
+//every()
+let allPositive = numbers.every((num)=>num>0);
+console.log("Every (>0);",allPositive);
+
+//some()
+let hasBig = numbers.some((num)=>num>100);
+
+//Filter adults
+let adults = users.filter(user=>user)
+
