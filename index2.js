@@ -98,3 +98,4 @@ console.log("Trimmed Password:",userPassword);
 // count words in a string 
 let sentnce2 = "This is a sample sentence";
 let words = sentnce2.trim().split(" ");
+
