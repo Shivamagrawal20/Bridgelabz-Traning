@@ -1,16 +1,10 @@
-const fs = require("fs");
-
-function writeFileSyncData(date, message, name, type) {
-    const fileName = `${name}.${type}`;
-    const content = `Date: ${date}\nName: ${name}\nMessage: ${message}\n\n`;
-
-    fs.writeFileSync(fileName, content, { flag: "a" }); // append mode
-}
-
-// Example usage
-writeFileSyncData(
-    new Date().toISOString(),
-    "This is a test log",
-    "git-basics",
-    "txt"
-);
+const {
+    createLog,
+    readLog,
+    updateLog
+  } = require("./function.js");
+  
+  console.log(createLog(new Date(), "ERROR", "This is an error"));
+  console.log(updateLog(new Date(), "INFO", "This is info log"));
+  console.log(readLog());
+  

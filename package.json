@@ -2,9 +2,9 @@
   "name": "bridgelabz-traning",
   "version": "1.0.0",
   "description": "This repository contains all the work, practice exercises, assignments, and learning materials completed as part of the **BridgeLabs Training Program**. It serves as a structured record of concepts learned, hands-on implementations, and continuous skill development throughout the training.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node app.js",
     "git-basics": "node git-basics.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
