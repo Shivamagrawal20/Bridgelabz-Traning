@@ -38,7 +38,6 @@ function writeLog() {
   );
 }
 
-/* ✅ CORRECT EXPORT */
 module.exports = {
   createLog,
   readLog,
