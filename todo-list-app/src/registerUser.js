@@ -1,39 +1,26 @@
 import fs from "fs";
 
-function registerUser(name, email, password) {
+function registerUser(id, name, email, password) {
     try {
-        let users = [];
+        let data = [];
 
-        const newUser = {
-            name,
-            email,
-            password,
-            todo: []
-        };
-
-        // Check if file exists
         if (fs.existsSync("todo.json")) {
-            const data = fs.readFileSync("todo.json", "utf-8");
-            users = JSON.parse(data);
+            data = JSON.parse(fs.readFileSync("todo.json", "utf-8"));
 
-            // Check if user already exists
-            const isUser = users.some(user => user.email === email);
-            if (isUser) {
-                return "User already exists";
-            }
+            let isUser = data.some(
+                (value) => value.email === email
+            );
+            if (isUser) return "user already exists";
         }
 
-        // Add new user
-        users.push(newUser);
+        data.push({id,name,email,password,todo: []});
 
-        // Write updated data
-        fs.writeFileSync("todo.json", JSON.stringify(users, null, 2));
-
-        return "User registered successfully";
+        fs.writeFileSync("todo.json", JSON.stringify(data, null, 2));
+        return "user registered";
 
     } catch (error) {
-        console.error(error);
-        return "Registration failed";
+        console.log(error);
+        return "registration failed";
     }
 }
 

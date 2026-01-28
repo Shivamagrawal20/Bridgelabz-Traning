@@ -1,20 +1,27 @@
 import fs from "fs";
 
-function markComplete(email, index) {
+function markComplete(name, index) {
     try {
-        const users = JSON.parse(fs.readFileSync("todo.json", "utf-8"));
-        const user = users.find(u => u.email === email);
+        if (!fs.existsSync("todo.json")) return "file not found";
 
-        if (!user || !user.todo[index]) return "Todo not found";
+        let data = JSON.parse(
+            fs.readFileSync("todo.json", "utf-8")
+        );
+
+        let user = data.find(
+            (value) => value.name === name
+        );
+
+        if (!user || !user.todo[index]) return "todo not found";
 
         user.todo[index].completed = true;
-        fs.writeFileSync("todo.json", JSON.stringify(users, null, 2));
 
-        return "Todo marked complete";
+        fs.writeFileSync("todo.json", JSON.stringify(data, null, 2));
+        return "todo marked complete";
 
-    } catch (err) {
-        console.error(err);
-        return "Update failed";
+    } catch (error) {
+        console.log(error);
+        return "update failed";
     }
 }
 

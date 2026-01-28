@@ -1,20 +1,29 @@
 import fs from "fs";
 
-function deleteTodo(email, index) {
+function deleteTodo(name) {
     try {
-        const users = JSON.parse(fs.readFileSync("todo.json", "utf-8"));
-        const user = users.find(u => u.email === email);
+        let isFile = fs.existsSync("todo.json");
+        if (!isFile) return "file does not exist";
 
-        if (!user || !user.todo[index]) return "Todo not found";
+        let data = JSON.parse(
+            fs.readFileSync("todo.json", "utf-8")
+        );
 
-        user.todo.splice(index, 1);
-        fs.writeFileSync("todo.json", JSON.stringify(users, null, 2));
+        let isUser = data.some(
+            (value) => value.name === name
+        );
+        if (!isUser) return "user not found";
 
-        return "Todo deleted";
+        let updatedData = data.filter(
+            (value) => value.name !== name
+        );
 
-    } catch (err) {
-        console.error(err);
-        return "Delete failed";
+        fs.writeFileSync("todo.json", JSON.stringify(updatedData, null, 2));
+        return "user deleted";
+
+    } catch (error) {
+        console.log(error);
+        return "delete failed";
     }
 }
 

@@ -1,6 +1,6 @@
+// Create a todo item and add it to the user's todo list in todo.json
 import fs from "fs";
-
-function addTodo(name, task) {
+function createTodo(name, task) {
     try {
         if (!fs.existsSync("todo.json")) return "file not found";
 
@@ -20,12 +20,11 @@ function addTodo(name, task) {
         });
 
         fs.writeFileSync("todo.json", JSON.stringify(data, null, 2));
-        return "todo added";
+        return "todo created";
 
     } catch (error) {
         console.log(error);
-        return "add todo failed";
+        return "create todo failed";
     }
 }
-
-export default addTodo;
+export default createTodo;

@@ -1,24 +1,28 @@
 import fs from "fs";
 
-function loginUser(email, password) {
+function loginUser(name, password) {
     try {
-        if (!fs.existsSync("todo.json")) {
-            return false;
-        }
+        if (!fs.existsSync("todo.json")) return false;
 
-        const data = JSON.parse(
+        let data = JSON.parse(
             fs.readFileSync("todo.json", "utf-8")
         );
 
-        const user = data.find(
-            value => value.email === email && value.password === password
+        let isUser = data.find(
+            (value) =>
+                value.name === name &&
+                value.password === password
         );
 
-        return user || false;
+        if (isUser) {
+            return isUser;
+        } else {
+            return false;
+        }
 
-    } catch (err) {
-        console.error(err);
-        return "Login error";
+    } catch (error) {
+        console.log(error);
+        return "login error";
     }
 }
 
