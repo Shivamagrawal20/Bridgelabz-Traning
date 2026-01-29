@@ -1,0 +1,21 @@
+{
+  "name": "bridgelabz-traning",
+  "version": "1.0.0",
+  "description": "This repository contains all the work, practice exercises, assignments, and learning materials completed as part of the **BridgeLabs Training Program**. It serves as a structured record of concepts learned, hands-on implementations, and continuous skill development throughout the training.",
+  "homepage": "https://github.com/Shivamagrawal20/Bridgelabz-Traning#readme",
+  "bugs": {
+    "url": "https://github.com/Shivamagrawal20/Bridgelabz-Traning/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shivamagrawal20/Bridgelabz-Traning.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  }
+}
