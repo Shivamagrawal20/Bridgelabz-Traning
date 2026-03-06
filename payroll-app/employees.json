@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1700000000000,
+    "name": "Bhav Mnagal",
+    "profileImage": "https://randomuser.me/api/portraits/men/32.jpg",
+    "gender": "Male",
+    "department": "Engineer",
+    "salary": 40000,
+    "startDate": "2026-02-19"
+  },
+  {
+    "id": 1771480451608,
+    "name": "Tushar Bhardwaj",
+    "profileImage": "https://randomuser.me/api/portraits/men/32.jpg",
+    "gender": "Male",
+    "department": [
+      "HR",
+      "Sales",
+      "Finance"
+    ],
+    "startDate": "2026-02-19",
+    "salary": 900000
+  },
+  {
+    "id": 1771565159863,
+    "name": "Shivam Agrawal",
+    "profileImage": "https://randomuser.me/api/portraits/men/32.jpg",
+    "gender": "Male",
+    "department": [
+      "Sales",
+      "Finance",
+      "Engineer"
+    ],
+    "salary": "65000",
+    "startDate": "2026-02-20"
+  },
+  {
+    "id": 1771565507931,
+    "name": "SP",
+    "profileImage": "https://randomuser.me/api/portraits/women/68.jpg",
+    "gender": "Female",
+    "department": "HR",
+    "salary": "95000",
+    "startDate": "2026-02-21"
+  }
+]

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Payroll</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="header">
+
+<h2>EMPLOYEE PAYROLL</h2>
+
+<a href="/add">
+<button class="add-btn">+ Add User</button>
+</a>
+
+</div>
+
+
+<h3 class="title">Employee Details</h3>
+
+
+<table>
+
+<tr>
+
+<th>Name</th>
+<th>Gender</th>
+<th>Department</th>
+<th>Salary</th>
+<th>Start Date</th>
+<th>Actions</th>
+
+</tr>
+
+
+<% employees.forEach(function(emp){ %>
+
+<tr>
+
+<td class="name-cell">
+
+<img src="<%= emp.profileImage %>" class="profile">
+
+<%= emp.name %>
+
+</td>
+
+<td><%= emp.gender %></td>
+
+<td>
+
+<span class="dept"><%= emp.department %></span>
+
+</td>
+
+<td>₹ <%= emp.salary %></td>
+
+<td><%= emp.startDate %></td>
+
+<td>
+
+<a href="/edit/<%= emp.id %>">Edit</a>
+
+<a href="/delete/<%= emp.id %>">Delete</a>
+
+</td>
+
+</tr>
+
+<% }) %>
+
+</table>
+
+
+</body>
+</html>

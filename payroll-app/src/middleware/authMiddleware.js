@@ -1,21 +1,24 @@
-import jwt from "jsonwebtoken";
+const jwt = require('jsonwebtoken');
 
-export function verifyToken(req, res, next) {
-    const authHeader = req.headers.authorization;
+const SECRET = "secret123";
 
-    if (!authHeader) {
-        return res.status(401).json({ message: "Access denied" });
-    }
+module.exports = (req,res,next)=>{
 
-    const token = authHeader.split(" ")[1];
+let token = req.cookies.token;
 
-    try {
-        const verified = jwt.verify(token, process.env.JWT_SECRET);
-        req.user = verified;
-        next();
-    } catch (error) {
-        res.status(400).json({ message: "Invalid token" });
-    }
+if(!token) return res.redirect('/login');
+
+try{
+
+jwt.verify(token,SECRET);
+
+next();
+
+}
+catch{
+
+res.redirect('/login');
+
 }
 
-router.put("/update", verifyToken, userupdate);
+};
