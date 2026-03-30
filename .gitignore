@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.log
+.env
+DS_Store
+# Ignore all files in the src directory except for .ts files
+src/*
+!src/**/*.ts
+
+
