@@ -10,7 +10,7 @@ moongose.connect("mongodb://localhost:27017/")
     console.log("conectado a la base de datos")
 })
 .catch((error)=>{
-    console.log("error al conectar a la base de datos", error)
+    console.log("error", error)
 })
 
 //schema
